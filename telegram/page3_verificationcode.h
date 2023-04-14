@@ -15,6 +15,9 @@ public:
     explicit page3_verificationcode(QWidget *parent = nullptr);
     ~page3_verificationcode();
 
+private slots:
+    void on_next_pushButton_clicked();
+
 private:
     Ui::page3_verificationcode *ui;
 };

@@ -158,7 +158,7 @@ void page2_login::on_capcha_pushButton_clicked()
 
 void page2_login::on_next_pushButton_clicked()
 {
-    if(ui->capcha_lineEdit->text()==code && check_verification  && checkusername && pass ){
+    if(ui->capcha_lineEdit->text()==code && check_verification  /*&& checkusername*/ && pass ){
         page3_verificationcode *w = new page3_verificationcode;
         w->show();
 
@@ -170,7 +170,7 @@ void page2_login::on_next_pushButton_clicked()
                        QMessageBox::information(this,"file","can not open file!!");
 
                     QTextStream out(&file);
-                    out << ui->username_lineEdit->text() << ui->Password_lineEdit << endl;
+                    out << "salam"  << endl;
 
                     file.close();
             }
