@@ -1,12 +1,21 @@
 #include "page_2_login.h"
 #include "ui_page_2_login.h"
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 #include "page_1_start.h"
 #include "ui_page_1_start.h"
 
 
 QString vaziat = "hide";
 
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> e9eeb98a75dfc24d28be4a017392bb768b878e7e
+>>>>>>> Stashed changes
 page_2_login::page_2_login(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::page_2_login)
@@ -16,6 +25,10 @@ page_2_login::page_2_login(QWidget *parent) :
     setMaximumSize(1000,700);
     setMinimumSize(1000,700);
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
     ui->label_username->setText("<b>Username:<b>");
     ui->label_password->setText("<b>Password:<b>");
 
@@ -30,6 +43,16 @@ page_2_login::page_2_login(QWidget *parent) :
     ui->label_Qaccont->setText("Do not have account?");
 
     ui->pushButton_back->setStyleSheet("background-image: url(:/new/prefix1/back.jpg);");
+<<<<<<< Updated upstream
+=======
+=======
+
+    ui->label->setText("<b>Username:<b>");
+    ui->label_2->setText("<b>Password:<b>");
+
+    ui->label_2->setToolTip("Your password must be at least 7 characters long and use (*&^%#$) symbols");
+>>>>>>> e9eeb98a75dfc24d28be4a017392bb768b878e7e
+>>>>>>> Stashed changes
 
 }
 
@@ -37,6 +60,10 @@ page_2_login::~page_2_login()
 {
     delete ui;
 }
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 
 
 void page_2_login::on_pushButton_showhide_clicked(){
@@ -75,3 +102,8 @@ void page_2_login::on_pushButton_back_clicked()
     this->close();
 }
 
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> e9eeb98a75dfc24d28be4a017392bb768b878e7e
+>>>>>>> Stashed changes

@@ -15,6 +15,10 @@ public:
     explicit page_2_login(QWidget *parent = nullptr);
     ~page_2_login();
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 private slots:
 
 
@@ -24,6 +28,11 @@ private slots:
 
     void on_pushButton_back_clicked();
 
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> e9eeb98a75dfc24d28be4a017392bb768b878e7e
+>>>>>>> Stashed changes
 private:
     Ui::page_2_login *ui;
 };

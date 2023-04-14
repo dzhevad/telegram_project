@@ -80,6 +80,7 @@ background-color: rgb(255, 255, 255);</string>
     </property>
    </widget>
   </widget>
+<<<<<<< HEAD
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -90,6 +91,8 @@ background-color: rgb(255, 255, 255);</string>
     </rect>
    </property>
   </widget>
+=======
+>>>>>>> e9eeb98a75dfc24d28be4a017392bb768b878e7e
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>

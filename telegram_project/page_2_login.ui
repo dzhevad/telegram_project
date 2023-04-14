@@ -10,6 +10,30 @@
     <height>700</height>
    </rect>
   </property>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1000</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>1000</width>
+    <height>700</height>
+   </size>
+  </property>
+>>>>>>> e9eeb98a75dfc24d28be4a017392bb768b878e7e
+>>>>>>> Stashed changes
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -17,15 +41,32 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
       <x>180</x>
       <y>100</y>
       <width>601</width>
       <height>441</height>
+<<<<<<< Updated upstream
+=======
+=======
+      <x>230</x>
+      <y>130</y>
+      <width>471</width>
+      <height>311</height>
+>>>>>>> e9eeb98a75dfc24d28be4a017392bb768b878e7e
+>>>>>>> Stashed changes
      </rect>
     </property>
     <property name="title">
      <string/>
     </property>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
     <widget class="QPushButton" name="pushButton_signin">
      <property name="geometry">
       <rect>
@@ -101,10 +142,25 @@
        <x>340</x>
        <y>180</y>
        <width>40</width>
+<<<<<<< Updated upstream
+=======
+=======
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>280</y>
+       <width>80</width>
+>>>>>>> e9eeb98a75dfc24d28be4a017392bb768b878e7e
+>>>>>>> Stashed changes
        <height>25</height>
       </rect>
      </property>
      <property name="text">
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
       <string/>
      </property>
     </widget>
@@ -158,6 +214,61 @@
      <height>26</height>
     </rect>
    </property>
+<<<<<<< Updated upstream
+=======
+=======
+      <string>sign in </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>80</y>
+       <width>241</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>User name:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Password:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>150</y>
+       <width>241</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+>>>>>>> e9eeb98a75dfc24d28be4a017392bb768b878e7e
+>>>>>>> Stashed changes
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
