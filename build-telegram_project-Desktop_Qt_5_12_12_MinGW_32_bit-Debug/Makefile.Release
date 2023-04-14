@@ -108,8 +108,10 @@ compiler_rcc_clean:
 release/qrc_images.cpp: ../telegram_project/images.qrc \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/bin/rcc.exe \
 		../telegram_project/back.jpg \
+		../telegram_project/show-button-icon.png \
 		../telegram_project/next-button.png \
-		../telegram_project/1.test.png
+		../telegram_project/1.test.png \
+		../telegram_project/hide-button-icon.png
 	C:\Qt\Qt5.12.12\5.12.12\mingw73_32\bin\rcc.exe -name images ..\telegram_project\images.qrc -o release\qrc_images.cpp
 
 compiler_moc_predefs_make_all: release/moc_predefs.h
@@ -615,7 +617,17 @@ release/page_1_start.o: ../telegram_project/page_1_start.cpp ../telegram_project
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QStatusBar \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qstatusbar.h \
-		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QWidget
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QWidget \
+		../telegram_project/page_2_login.h \
+		ui_page_2_login.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QGroupBox \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qgroupbox.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QLineEdit \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qtextcursor.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qtextformat.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qpen.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qtextoption.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\page_1_start.o ..\telegram_project\page_1_start.cpp
 
 release/page_2_login.o: ../telegram_project/page_2_login.cpp ../telegram_project/page_2_login.h \
@@ -725,7 +737,39 @@ release/page_2_login.o: ../telegram_project/page_2_login.cpp ../telegram_project
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qtouchdevice.h \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qicon.h \
-		ui_page_2_login.h
+		ui_page_2_login.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/QVariant \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QApplication \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qapplication.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/qcoreapplication.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtCore/qeventloop.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qguiapplication.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qinputmethod.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QGroupBox \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qgroupbox.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qframe.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QLabel \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qlabel.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QLineEdit \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qtextcursor.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qtextformat.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qpen.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtGui/qtextoption.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QMenuBar \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qmenubar.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qmenu.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qaction.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qactiongroup.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QPushButton \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QStatusBar \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/qstatusbar.h \
+		C:/Qt/Qt5.12.12/5.12.12/mingw73_32/include/QtWidgets/QWidget \
+		../telegram_project/page_1_start.h \
+		ui_page_1_start.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\page_2_login.o ..\telegram_project\page_2_login.cpp
 
 release/qrc_images.o: release/qrc_images.cpp 
