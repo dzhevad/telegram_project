@@ -164,13 +164,13 @@ void page2_login::on_next_pushButton_clicked()
 
         if(ui->signin_pushButton->text() == "login"){
             if(checkusername){
-                QFile file("D:/text/savenames.txt");
+                QFile file("C:/Users/javad/Documents/GitHub/telegram_project/telegram/savenames.txt");
 
                 if (!file.open(QIODevice::Append | QIODevice::Text))
                        QMessageBox::information(this,"file","can not open file!!");
 
                     QTextStream out(&file);
-                    out << "salam"  << endl;
+                    out << ui->username_lineEdit->text()  << endl;
 
                     file.close();
             }
@@ -253,7 +253,7 @@ void page2_login::on_username_lineEdit_textChanged(const QString &arg1)
     if(ui->signin_pushButton->text() == "login"){
         username = ui->username_lineEdit->text();
 
-        QFile file("D:/text/savenames.txt");
+        QFile file("C:/Users/javad/Documents/GitHub/telegram_project/telegram/savenames.txt");
         if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
            QMessageBox::warning(this,"file","Could not oen the file");
         }
@@ -280,7 +280,7 @@ void page2_login::on_username_lineEdit_textChanged(const QString &arg1)
     else{
         username = ui->username_lineEdit->text();
 
-        QFile file("D:/text/savenames.txt");
+        QFile file("C:/Users/javad/Documents/GitHub/telegram_project/telegram/savenames.txt");
         if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
            QMessageBox::warning(this,"file","Could not oen the file");
         }
