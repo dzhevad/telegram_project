@@ -10,13 +10,16 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    page_1_start.cpp
+    page_1_start.cpp \
+    page_2_login.cpp
 
 HEADERS += \
-    page_1_start.h
+    page_1_start.h \
+    page_2_login.h
 
 FORMS += \
-    page_1_start.ui
+    page_1_start.ui \
+    page_2_login.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
