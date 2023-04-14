@@ -13,7 +13,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -27,7 +26,6 @@ public:
     QLabel *label;
     QLabel *label_2;
     QPushButton *pushButton;
-    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *page_1_start)
@@ -59,10 +57,6 @@ public:
         pushButton->setStyleSheet(QString::fromUtf8("image: url(:/new/prefix1/next-button.jpg);\n"
 "background-color: rgb(255, 255, 255);"));
         page_1_start->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(page_1_start);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 900, 25));
-        page_1_start->setMenuBar(menubar);
         statusbar = new QStatusBar(page_1_start);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         page_1_start->setStatusBar(statusbar);

@@ -15,6 +15,8 @@ page_1_start::page_1_start(QWidget *parent)
     setMaximumSize(900,600);
     setMinimumSize(900,600);
 
+    ui->label_2->setText("<b>Welcome :)<b>");
+
     ui->label->setStyleSheet("background-image: url(:/new/prefix1/1.test.png);");           // load logo image
 
     ui->pushButton->setStyleSheet("background-image: url(:/new/prefix1/next-button.png);"); // load next button image
