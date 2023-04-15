@@ -1,0 +1,10 @@
+release/main.o
+release/page1_start.o
+release/page2_login.o
+release/page3_verificationcode.o
+release/page4_home.o
+release/qrc_images.o
+release/moc_page1_start.o
+release/moc_page2_login.o
+release/moc_page3_verificationcode.o
+release/moc_page4_home.o

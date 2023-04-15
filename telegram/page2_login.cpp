@@ -3,6 +3,7 @@
 
 #include "page1_start.h"
 #include "ui_page1_start.h"
+
 #include "page3_verificationcode.h"
 #include "ui_page3_verificationcode.h"
 
@@ -14,16 +15,20 @@
 #include <QTextStream>
 #include <QFile>
 
-
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
+#include <string>
+#include <QString>
+
+using namespace std;
 
 QString vaziat = "hide";
 QString code = "0";
 
-QString username = "";
-bool checkusername = false;
+//QString username = "";
+bool checkusername = true;
 
 bool check_verification =  true;
 QString verification = "";
@@ -35,6 +40,12 @@ int len ;
 bool symbol = false;
 bool pass = false;
 QString text = "";
+
+
+string username;
+string pasword;
+string serch;
+
 
 
 
@@ -164,7 +175,26 @@ void page2_login::on_next_pushButton_clicked()
 
         if(ui->signin_pushButton->text() == "login"){
             if(checkusername){
-                QFile file("C:/Users/javad/Documents/GitHub/telegram_project/telegram/savenames.txt");
+
+                username = ui->username_lineEdit->text().toStdString();
+                pasword = ui->Password_lineEdit->text().toStdString();
+
+                ofstream file("savenames.txt", ios_base::app);
+
+                file << username << endl << pasword << endl;
+
+                file.close();
+
+                ofstream file1("user.txt", ios_base::app);
+
+                file1 << username << endl << pasword << endl;
+
+                file1.close();
+
+
+
+
+                /*QFile file("C:/Users/javad/Documents/GitHub/telegram_project/telegram/savenames.txt");
 
                 if (!file.open(QIODevice::Append | QIODevice::Text))
                        QMessageBox::information(this,"file","can not open file!!");
@@ -172,7 +202,7 @@ void page2_login::on_next_pushButton_clicked()
                     QTextStream out(&file);
                     out << ui->username_lineEdit->text()  << endl;
 
-                    file.close();
+                    file.close();*/
             }
         }
         this->close();
@@ -247,13 +277,36 @@ void page2_login::on_Verification_Password_lineEdit_textChanged(const QString &a
 
 }
 
-
 void page2_login::on_username_lineEdit_textChanged(const QString &arg1)
 {
     if(ui->signin_pushButton->text() == "login"){
-        username = ui->username_lineEdit->text();
 
-        QFile file("C:/Users/javad/Documents/GitHub/telegram_project/telegram/savenames.txt");
+        username = ui->username_lineEdit->text().toStdString();
+
+
+        ifstream file("savenames.txt");
+
+        while(file >> serch){
+            if (serch == username){
+                ui->check_username_label->setText("Username has been exist");
+                ui->check_username_label->show();
+                ui->check_username_label->setStyleSheet("color: rgb(170, 0, 0);");
+                checkusername = false;
+                break;
+            }
+            else{
+                ui->check_username_label->show();
+                ui->check_username_label->setStyleSheet("color: rgb(0, 255, 0);");
+                checkusername = true;
+                break;
+            }
+
+        }
+
+        file.close();
+
+
+       /* QFile file("C:/Users/javad/Documents/GitHub/telegram_project/telegram/savenames.txt");
         if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
            QMessageBox::warning(this,"file","Could not oen the file");
         }
@@ -273,12 +326,37 @@ void page2_login::on_username_lineEdit_textChanged(const QString &arg1)
                 checkusername = true;
             }
         }
-        file.close();
+        file.close();*/
 
 
     }
     else{
-        username = ui->username_lineEdit->text();
+
+
+        username = ui->username_lineEdit->text().toStdString();
+
+
+        ifstream file("savenames.txt");
+
+        while(file >> serch){
+            if (serch == username){
+                ui->check_username_label->setText("Username has  been exist");
+                ui->check_username_label->show();
+                ui->check_username_label->setStyleSheet("color: rgb(0, 255, 0);");
+                checkusername = true;
+                break;
+            }
+            else{
+                ui->check_username_label->setText("Username has not been exist");
+                ui->check_username_label->show();
+                ui->check_username_label->setStyleSheet("color: rgb(170, 0, 0);");
+                checkusername = false;
+                break;
+            }
+
+            file.close();
+
+       /* username = ui->username_lineEdit->text();
 
         QFile file("C:/Users/javad/Documents/GitHub/telegram_project/telegram/savenames.txt");
         if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -300,8 +378,10 @@ void page2_login::on_username_lineEdit_textChanged(const QString &arg1)
                 ui->check_username_label->setStyleSheet("color: rgb(170, 0, 0);");
                 checkusername = false;
             }
+            file.close();*/
         }
-            file.close();
+
     }
 }
+
 
