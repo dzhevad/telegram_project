@@ -10,7 +10,8 @@
 #include <cstdlib>
 #include <ctime>
 
-int random  ;
+// for create a random number
+int rando ;
 
 page3_verificationcode::page3_verificationcode(QWidget *parent) :
     QMainWindow(parent),
@@ -18,13 +19,15 @@ page3_verificationcode::page3_verificationcode(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    //create a random number
     srand(time(NULL));
-    random = rand() % 9000+1000;
+    rando = rand() % 9000+1000;
 
-    QMessageBox::information(this,"Verification code",QString::number(random));
+    // use QString::number for change int to Qstring
+    QMessageBox::information(this,"Verification code",QString::number(rando));
 
 
-    ui->verification_label->setText("<b>Enter the verification code:<b>");
+    ui->verification_label->setText("<i><b>Enter the verification code:<b><i>");
 
 }
 
@@ -35,13 +38,14 @@ page3_verificationcode::~page3_verificationcode()
 
 void page3_verificationcode::on_next_pushButton_clicked()
 {
-    if(ui->verification_lineEdit->text() == QString::number(random)){
+    //check the verification code
+    if(ui->verification_lineEdit->text() == QString::number(rando)){
         page4_home *w = new page4_home;
         w->show();
         this->close();
     }
     else{
-        QMessageBox::warning(this,"verification code","Enter the verification code like a human");
+        QMessageBox::warning(this,"verification code","Enter the verification code like a human!");
     }
 }
 
