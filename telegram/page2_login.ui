@@ -165,10 +165,10 @@
     <widget class="QPushButton" name="next_pushButton">
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>240</x>
        <y>330</y>
-       <width>221</width>
-       <height>86</height>
+       <width>200</width>
+       <height>82</height>
       </rect>
      </property>
      <property name="text">
@@ -264,7 +264,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>25</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

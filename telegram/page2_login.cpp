@@ -70,8 +70,8 @@ page2_login::page2_login(QWidget *parent) :
 
     //<b> bold
     ui->username_label->setText("<i><b>Username:<b><i>");
-
-
+    //this->setStyleSheet("background-image: url(:/images/page1_back.jpg);");
+    //ui->groupBox->setStyleSheet("background-color: rgb(255, 255, 255);");
     ui->Password_label->setText("<i><b>Password:<b><i>");
 
 
@@ -83,6 +83,8 @@ page2_login::page2_login(QWidget *parent) :
     ui->verification_label->hide();
 
     ui->check_username_label->hide();
+
+
 
     ui->signin_pushButton->setText("sign in");
 

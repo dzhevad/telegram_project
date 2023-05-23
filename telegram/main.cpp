@@ -2,6 +2,7 @@
 
 #include "page4_home.h"
 #include "ui_page4_home.h"
+#include <QListWidget>
 
 #include <QApplication>
 

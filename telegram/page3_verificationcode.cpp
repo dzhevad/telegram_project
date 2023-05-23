@@ -19,6 +19,10 @@ page3_verificationcode::page3_verificationcode(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    //set minimum and muximum size
+    setMinimumSize(1000,700);
+    setMaximumSize(1000,700);
+
     //create a random number
     srand(time(NULL));
     rando = rand() % 9000+1000;

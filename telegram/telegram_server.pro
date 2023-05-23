@@ -1,4 +1,5 @@
 QT       += core gui
+QT       += network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,22 +14,19 @@ SOURCES += \
     page1_start.cpp \
     page2_login.cpp \
     page3_verificationcode.cpp \
-    page4_home.cpp \
-    pagr5_username.cpp
+    page4_home.cpp
 
 HEADERS += \
     page1_start.h \
     page2_login.h \
     page3_verificationcode.h \
-    page4_home.h \
-    pagr5_username.h
+    page4_home.h
 
 FORMS += \
     page1_start.ui \
     page2_login.ui \
     page3_verificationcode.ui \
-    page4_home.ui \
-    pagr5_username.ui
+    page4_home.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -37,7 +35,3 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     images.qrc
-
-DISTFILES += \
-    Page5_user_name.qml \
-    Page5_user_nameForm.ui.qml

@@ -12,21 +12,22 @@ page1_start::page1_start(QWidget *parent)
     ui->setupUi(this);
 
     //set the maximum and minimum size for page
-    setMaximumSize(900,600);
-    setMinimumSize(900,600);
+    setMaximumSize(1000,700);
+    setMinimumSize(1000,700);
 
-    setStyleSheet("background-color: rgb(255, 255, 255);");
+    setStyleSheet("background-image: url(:/images/page1_back.jpg);");
 
-    ui->groupBox->setStyleSheet("background-color: rgb(255, 255, 255);");
+    ui->groupBox->setStyleSheet("background-image: url(:/images/no back for pag 1.png);");
+
 
     //load the logo picture
     ui->logo_label->setStyleSheet("background-image: url(:/images/1.test.png);");
 
     //load the next button picture
-    ui->next_pushButton->setStyleSheet("background-image: url(:/images/next-button.png);");
 
+    ui->next_pushButton->setStyleSheet("background-image: url(:/images/next-button.png);");
     // <b> for bold
-    ui->welcome_label->setText("<i><b>Welcome :)<b><i>");
+    ui->welcome_label->setStyleSheet("background-image: url(:/images/welcome _page4.png);");
 
 
 
