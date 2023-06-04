@@ -77,13 +77,14 @@ page2_login::page2_login(QWidget *parent) :
     //set the maximum and minimum size for page
     setMinimumSize(800,600);
     setMaximumSize(800,600);
-
+    this->setStyleSheet("background-color: rgb(0, 91, 127);");
+    ui->groupBox->setStyleSheet("background-color: rgb(255, 255, 255);");
     //<b> bold
-    ui->username_label->setText("<i><b>Username:<b><i>");
+    //ui->username_label->setText("<i><b>Username:<b><i>");
     //this->setStyleSheet("background-image: url(:/images/page1_back.jpg);");
 
     //ui->groupBox->setStyleSheet("background-color: rgb(255, 255, 255);");
-    ui->Password_label->setText("<i><b>Password:<b><i>");
+    //ui->Password_label->setText("<i><b>Password:<b><i>");
 
     //groupbox color -> white
 
@@ -91,10 +92,10 @@ page2_login::page2_login(QWidget *parent) :
     //set back groud the ocean picture
    // this->setStyleSheet("background-image: url(:/images/page1_back.jpg);");
    // ui->groupBox->setStyleSheet("color: rgb(255, 255, 255);");
-    ui->verificationpassword_label->setText("<i><b>Verificaton password:<b><i>");
+    //ui->verificationpassword_label->setText("<i><b>Verificaton password:<b><i>");
 
     //Hide verification password for login
-    ui->verificationpassword_label->hide();
+    //ui->verificationpassword_label->hide();
     ui->Verification_Password_lineEdit->hide();
     ui->verification_label->hide();
 
@@ -138,7 +139,7 @@ void page2_login::on_signin_pushButton_clicked()
     if(ui->signin_pushButton->text() == "sign in"){
     // show the verification password box
         ui->Verification_Password_lineEdit->show();
-        ui->verificationpassword_label->show();
+        //ui->verificationpassword_label->show();
         ui->verification_label->show();
 
         ui->signin_pushButton->setText("login");
@@ -148,7 +149,7 @@ void page2_login::on_signin_pushButton_clicked()
     else{
     // hide the verification password box
         ui->Verification_Password_lineEdit->hide();
-        ui->verificationpassword_label->hide();
+        //ui->verificationpassword_label->hide();
         ui->verification_label->hide();
 
         ui->signin_pushButton->setText("sign in");

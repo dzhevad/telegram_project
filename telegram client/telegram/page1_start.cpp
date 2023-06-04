@@ -14,18 +14,9 @@ page1_start::page1_start(QWidget *parent)
     setMaximumSize(800,580);
     setMinimumSize(800,600);
 
-    setStyleSheet("background-image: url(:/images/page1_back.jpg);");
+    setStyleSheet("background-image: url(:/images/Background_page1_plane.jpg);");
 
-    ui->groupBox->setStyleSheet("background-image: url(:/images/no back for pag 1.png);");
-    //ui->groupBox->setStyleSheet("QGroupBox { border: 0px solid grey; ");
-    //load the logo picture
-    ui->logo_label->setStyleSheet("background-image: url(:/images/1.test.png);");
-
-    //load the next button picture
-
-    ui->next_pushButton->setStyleSheet("background-image: url(:/images/next-button.png);");
-    // <b> for bold
-    ui->welcome_label->setStyleSheet("background-image: url(:/images/welcome _page4.png);");
+    ui->next_pushButton->setStyleSheet("background-color: rgb(0, 91, 127);");
 
 
 

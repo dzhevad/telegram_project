@@ -11,39 +11,67 @@ page4_home::page4_home(QWidget *parent) :
     setMinimumSize(800,600);
     setMaximumSize(800,600);
 
+    ui->setupUi(this);
+    m_server = new QTcpServer();
+
+    if(m_server->listen(QHostAddress::Any, 8080))
+    {
+       connect(this, &page4_home::newMessage, this, &page4_home::displayMessage);
+       connect(m_server, &QTcpServer::newConnection, this, &page4_home::newConnection);
+       //ui->statusBar->showMessage("Server is listening...");
+    }
+    else
+    {
+        QMessageBox::critical(this,"QTCPServer",QString("Unable to start the server: %1.").arg(m_server->errorString()));
+        exit(EXIT_FAILURE);
+    }
+
+
     ui->lineEdit_message->setPlaceholderText("Type here your message...");
 
-    socket = new QTcpSocket(this);
 
-    connect(this, &page4_home::newMessage, this, &page4_home::displayMessage);
+
+}
+
+page4_home::~page4_home()
+{
+
+    foreach (QTcpSocket* socket, connection_set)
+    {
+        socket->close();
+        socket->deleteLater();
+    }
+
+    m_server->close();
+    m_server->deleteLater();
+
+    delete ui;
+}
+
+
+void page4_home::newConnection()
+{
+    while (m_server->hasPendingConnections())
+        appendToSocketList(m_server->nextPendingConnection());
+}
+
+void page4_home::appendToSocketList(QTcpSocket* socket)
+{
+    connection_set.insert(socket);
     connect(socket, &QTcpSocket::readyRead, this, &page4_home::readSocket);
     connect(socket, &QTcpSocket::disconnected, this, &page4_home::discardSocket);
     //connect(socket, &QAbstractSocket::errorOccurred, this, &MainWindow::displayError);
 
     connect(socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(handleError(QAbstractSocket::SocketError)));
 
-    socket->connectToHost(QHostAddress::LocalHost,8080);
-
-    if(socket->waitForConnected()){
-       // ui->statusBar->showMessage("Connected to Server");
-    }else{
-        QMessageBox::critical(this,"QTCPClient", QString("The following error occurred: %1.").arg(socket->errorString()));
-        exit(EXIT_FAILURE);
-    }
-
+    ui->comboBox_receiver->addItem(QString::number(socket->socketDescriptor()));
+    displayMessage(QString("INFO :: Client with sockd:%1 has just entered the room").arg(socket->socketDescriptor()));
 }
-
-page4_home::~page4_home()
-{
-    if(socket->isOpen())
-        socket->close();
-
-    delete ui;
-}
-
 
 void page4_home::readSocket()
 {
+    QTcpSocket* socket = reinterpret_cast<QTcpSocket*>(sender());
+
     QByteArray buffer;
 
     QDataStream socketStream(socket);
@@ -92,10 +120,15 @@ void page4_home::readSocket()
 
 void page4_home::discardSocket()
 {
-    socket->deleteLater();
-    socket=nullptr;
+    QTcpSocket* socket = reinterpret_cast<QTcpSocket*>(sender());
+    QSet<QTcpSocket*>::iterator it = connection_set.find(socket);
+    if (it != connection_set.end()){
+        displayMessage(QString("INFO :: A client has just left the room").arg(socket->socketDescriptor()));
+        connection_set.remove(*it);
+    }
+    refreshComboBox();
 
-   // ui->statusBar->showMessage("Disconnected!");
+    socket->deleteLater();
 }
 
 void page4_home::displayError(QAbstractSocket::SocketError socketError)
@@ -104,18 +137,77 @@ void page4_home::displayError(QAbstractSocket::SocketError socketError)
         case QAbstractSocket::RemoteHostClosedError:
         break;
         case QAbstractSocket::HostNotFoundError:
-            QMessageBox::information(this, "QTCPClient", "The host was not found. Please check the host name and port settings.");
+            QMessageBox::information(this, "QTCPServer", "The host was not found. Please check the host name and port settings.");
         break;
         case QAbstractSocket::ConnectionRefusedError:
-            QMessageBox::information(this, "QTCPClient", "The connection was refused by the peer. Make sure QTCPServer is running, and check that the host name and port settings are correct.");
+            QMessageBox::information(this, "QTCPServer", "The connection was refused by the peer. Make sure QTCPServer is running, and check that the host name and port settings are correct.");
         break;
         default:
-            QMessageBox::information(this, "QTCPClient", QString("The following error occurred: %1.").arg(socket->errorString()));
+            QTcpSocket* socket = qobject_cast<QTcpSocket*>(sender());
+            QMessageBox::information(this, "QTCPServer", QString("The following error occurred: %1.").arg(socket->errorString()));
         break;
     }
 }
 
 void page4_home::on_pushButton_sendMessage_clicked()
+{
+    QString receiver = ui->comboBox_receiver->currentText();
+
+    if(receiver=="Broadcast")
+    {
+        foreach (QTcpSocket* socket,connection_set)
+        {
+            sendMessage(socket);
+        }
+    }
+    else
+    {
+        foreach (QTcpSocket* socket,connection_set)
+        {
+            if(socket->socketDescriptor() == receiver.toLongLong())
+            {
+                sendMessage(socket);
+                break;
+            }
+        }
+    }
+    ui->lineEdit_message->clear();
+}
+
+
+void page4_home::on_pushButton_sendAttachment_clicked()
+{
+    QString receiver = ui->comboBox_receiver->currentText();
+
+    QString filePath = QFileDialog::getOpenFileName(this, ("Select an attachment"), QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation), ("File (*.json *.txt *.png *.jpg *.jpeg)"));
+
+    if(filePath.isEmpty()){
+        QMessageBox::critical(this,"QTCPClient","You haven't selected any attachment!");
+        return;
+    }
+
+    if(receiver=="Broadcast")
+    {
+        foreach (QTcpSocket* socket,connection_set)
+        {
+            sendAttachment(socket, filePath);
+        }
+    }
+    else
+    {
+        foreach (QTcpSocket* socket,connection_set)
+        {
+            if(socket->socketDescriptor() == receiver.toLongLong())
+            {
+                sendAttachment(socket, filePath);
+                break;
+            }
+        }
+    }
+    ui->lineEdit_message->clear();
+}
+
+void page4_home::sendMessage(QTcpSocket* socket)
 {
     if(socket)
     {
@@ -133,30 +225,22 @@ void page4_home::on_pushButton_sendMessage_clicked()
             QByteArray byteArray = str.toUtf8();
             byteArray.prepend(header);
 
+            socketStream.setVersion(QDataStream::Qt_5_12);
             socketStream << byteArray;
-
-            ui->lineEdit_message->clear();
         }
         else
-            QMessageBox::critical(this,"QTCPClient","Socket doesn't seem to be opened");
+            QMessageBox::critical(this,"QTCPServer","Socket doesn't seem to be opened");
     }
     else
-        QMessageBox::critical(this,"QTCPClient","Not connected");
+        QMessageBox::critical(this,"QTCPServer","Not connected");
 }
 
-void page4_home::on_pushButton_sendAttachment_clicked()
+void page4_home::sendAttachment(QTcpSocket* socket, QString filePath)
 {
     if(socket)
     {
         if(socket->isOpen())
         {
-            QString filePath = QFileDialog::getOpenFileName(this, ("Select an attachment"), QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation), ("File (*.json *.txt *.png *.jpg *.jpeg)"));
-
-            if(filePath.isEmpty()){
-                QMessageBox::critical(this,"QTCPClient","You haven't selected any attachment!");
-                return;
-            }
-
             QFile m_file(filePath);
             if(m_file.open(QIODevice::ReadOnly)){
 
@@ -173,19 +257,25 @@ void page4_home::on_pushButton_sendAttachment_clicked()
                 QByteArray byteArray = m_file.readAll();
                 byteArray.prepend(header);
 
-                socketStream.setVersion(QDataStream::Qt_5_12);
                 socketStream << byteArray;
             }else
-                QMessageBox::critical(this,"QTCPClient","Attachment is not readable!");
+                QMessageBox::critical(this,"QTCPClient","Couldn't open the attachment!");
         }
         else
-            QMessageBox::critical(this,"QTCPClient","Socket doesn't seem to be opened");
+            QMessageBox::critical(this,"QTCPServer","Socket doesn't seem to be opened");
     }
     else
-        QMessageBox::critical(this,"QTCPClient","Not connected");
+        QMessageBox::critical(this,"QTCPServer","Not connected");
 }
 
 void page4_home::displayMessage(const QString& str)
 {
     ui->textBrowser_receivedMessages->append(str);
+}
+
+void page4_home::refreshComboBox(){
+    ui->comboBox_receiver->clear();
+    ui->comboBox_receiver->addItem("Broadcast");
+    foreach(QTcpSocket* socket, connection_set)
+        ui->comboBox_receiver->addItem(QString::number(socket->socketDescriptor()));
 }

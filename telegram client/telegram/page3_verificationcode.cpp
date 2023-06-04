@@ -18,7 +18,7 @@ page3_verificationcode::page3_verificationcode(QWidget *parent) :
     ui(new Ui::page3_verificationcode)
 {
     ui->setupUi(this);
-
+    this->setStyleSheet("background-image: url(:/images/back_moon.jpg);");
     //set minimum and muximum size
     setMinimumSize(800,600);
     setMaximumSize(800,600);
@@ -26,14 +26,16 @@ page3_verificationcode::page3_verificationcode(QWidget *parent) :
     //create a random number
     srand(time(NULL));
     rando = rand() % 9000+1000;
-
+    ui->centralwidget->setStyleSheet("background-color: rgb(255, 255, 255);");
     // use QString::number for change int to Qstring
     QMessageBox::information(this,"Verification code",QString::number(rando));
 
 
     ui->verification_label->setText("<i><b>Enter the verification code:<b><i>");
 
-    ui->groupBox_get_name->hide();
+    ui->label_get_name->hide();
+    ui->lineEdit_get_name->hide();
+    ui->pushButton_get_name->hide();
 
 }
 
@@ -46,7 +48,17 @@ void page3_verificationcode::on_next_pushButton_clicked()
 {
     //check the verification code
     if(ui->verification_lineEdit->text() == QString::number(rando)){
-       ui->groupBox_get_name->show();
+
+        ui->label_get_name->show();
+        ui->lineEdit_get_name->show();
+        ui->pushButton_get_name->show();
+
+
+        ui->next_pushButton->hide();
+        ui->verification_label->hide();
+        ui->verification_lineEdit->hide();
+
+
     }
     else{
         QMessageBox::warning(this,"verification code","Enter the verification code like a human!");
