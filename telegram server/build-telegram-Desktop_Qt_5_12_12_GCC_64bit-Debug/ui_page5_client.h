@@ -29,8 +29,8 @@ public:
     QGroupBox *groupBox;
     QTextBrowser *textBrowser_receivedMessages;
     QLineEdit *lineEdit_message;
-    QPushButton *pushButton_sendAttachment;
     QPushButton *pushButton_sendMessage;
+    QPushButton *pushButton_sendAttachment;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -51,12 +51,12 @@ public:
         lineEdit_message = new QLineEdit(groupBox);
         lineEdit_message->setObjectName(QString::fromUtf8("lineEdit_message"));
         lineEdit_message->setGeometry(QRect(0, 500, 371, 71));
-        pushButton_sendAttachment = new QPushButton(groupBox);
-        pushButton_sendAttachment->setObjectName(QString::fromUtf8("pushButton_sendAttachment"));
-        pushButton_sendAttachment->setGeometry(QRect(370, 500, 81, 31));
         pushButton_sendMessage = new QPushButton(groupBox);
         pushButton_sendMessage->setObjectName(QString::fromUtf8("pushButton_sendMessage"));
-        pushButton_sendMessage->setGeometry(QRect(370, 530, 81, 31));
+        pushButton_sendMessage->setGeometry(QRect(370, 500, 81, 31));
+        pushButton_sendAttachment = new QPushButton(groupBox);
+        pushButton_sendAttachment->setObjectName(QString::fromUtf8("pushButton_sendAttachment"));
+        pushButton_sendAttachment->setGeometry(QRect(370, 530, 81, 31));
         page5_client->setCentralWidget(centralwidget);
         menubar = new QMenuBar(page5_client);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -75,8 +75,9 @@ public:
     {
         page5_client->setWindowTitle(QApplication::translate("page5_client", "MainWindow", nullptr));
         groupBox->setTitle(QApplication::translate("page5_client", "GroupBox", nullptr));
-        pushButton_sendAttachment->setText(QApplication::translate("page5_client", "send", nullptr));
-        pushButton_sendMessage->setText(QApplication::translate("page5_client", "Attach", nullptr));
+        lineEdit_message->setText(QString());
+        pushButton_sendMessage->setText(QApplication::translate("page5_client", "send", nullptr));
+        pushButton_sendAttachment->setText(QApplication::translate("page5_client", "Attach", nullptr));
     } // retranslateUi
 
 };

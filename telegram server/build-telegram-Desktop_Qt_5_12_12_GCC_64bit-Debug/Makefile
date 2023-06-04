@@ -1339,6 +1339,27 @@ moc_page5_client.cpp: ../telegram/page5_client.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtouchdevice.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qicon.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/QAbstractSocket \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/qabstractsocket.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QDebug \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QFile \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QFileDialog \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qfiledialog.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdir.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfileinfo.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdialog.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/QHostAddress \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/qhostaddress.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QMessageBox \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmessagebox.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QMetaType \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QString \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QStandardPaths \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstandardpaths.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/QTcpSocket \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/qtcpsocket.h \
 		moc_predefs.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/bin/moc
 	/home/javad/Qt5.12.12/5.12.12/gcc_64/bin/moc $(DEFINES) --include '/home/javad/Documents/GitHub/telegram_project/telegram server/build-telegram-Desktop_Qt_5_12_12_GCC_64bit-Debug/moc_predefs.h' -I/home/javad/Qt5.12.12/5.12.12/gcc_64/mkspecs/linux-g++ -I'/home/javad/Documents/GitHub/telegram_project/telegram server/telegram' -I/home/javad/Qt5.12.12/5.12.12/gcc_64/include -I/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets -I/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui -I/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql -I/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork -I/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore -I. -I/usr/include/c++/12 -I/usr/include/x86_64-linux-gnu/c++/12 -I/usr/include/c++/12/backward -I/usr/lib/gcc/x86_64-linux-gnu/12/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../telegram/page5_client.h -o moc_page5_client.cpp
@@ -1523,44 +1544,23 @@ main.o: ../telegram/main.cpp ../telegram/page1_start.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qrubberband.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qframe.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractitemmodel.h \
-		ui_page4_home.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QVariant \
+		../telegram/page5_client.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/QAbstractSocket \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/QHostAddress \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QString \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QListWidget \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlistwidget.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlistview.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qapplication.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcoreapplication.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qeventloop.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qguiapplication.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qinputmethod.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QGroupBox \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qgroupbox.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLineEdit \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextcursor.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextformat.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qpen.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextoption.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QMenuBar \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmenubar.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmenu.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qaction.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qactiongroup.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QStatusBar \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstatusbar.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTextBrowser \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtextbrowser.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtextedit.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextdocument.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QWidget \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QListWidget \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlistwidget.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlistview.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractitemview.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qitemselectionmodel.h
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qinputmethod.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../telegram/main.cpp
 
 page1_start.o: ../telegram/page1_start.cpp ../telegram/page1_start.h \
@@ -2049,7 +2049,142 @@ page3_verificationcode.o: ../telegram/page3_verificationcode.cpp ../telegram/pag
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtextbrowser.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtextedit.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextdocument.h
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextdocument.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/QtSql \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/QtSqlDepends \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QtCore \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QtCoreDepends \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractanimation.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractproxymodel.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstractstate.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qabstracttransition.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qanimationgroup.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qarraydataops.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qarraydatapointer.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qbasictimer.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qbitarray.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qbuffer.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qbytearraymatcher.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcache.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcborarray.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcborvalue.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdatetime.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcborcommon.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/quuid.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcbormap.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcborstream.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfloat16.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcollator.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcommandlineoption.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcommandlineparser.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcryptographichash.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdiriterator.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qeasingcurve.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qendian.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qeventtransition.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qexception.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfactoryinterface.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfileselector.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QObject \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QStringList \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfilesystemwatcher.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfinalstate.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfuture.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qrunnable.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qresultstore.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfuturesynchronizer.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfuturewatcher.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qhistorystate.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qidentityproxymodel.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qisenum.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qjsonarray.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qjsonvalue.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qjsondocument.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qjsonobject.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qlibrary.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qlibraryinfo.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qversionnumber.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qlinkedlist.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qlockfile.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qloggingcategory.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmath.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmessageauthenticationcode.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmetaobject.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmimedata.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmimedatabase.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qmimetype.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qobjectcleanuphandler.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qoperatingsystemversion.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qpauseanimation.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qplugin.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qpointer.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qpluginloader.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qprocess.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qpropertyanimation.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qvariantanimation.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qqueue.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qrandom.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qreadwritelock.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qresource.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsavefile.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qscopedvaluerollback.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qscopeguard.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsemaphore.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsettings.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsharedmemory.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsignalmapper.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsignaltransition.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsocketnotifier.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstack.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstate.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstatemachine.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstorageinfo.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstringlistmodel.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qsystemsemaphore.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtemporarydir.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtemporaryfile.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtextboundaryfinder.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtextcodec.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qthread.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qthreadpool.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qthreadstorage.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtimeline.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtimer.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtimezone.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtranslator.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtypetraits.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qwaitcondition.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qwineventnotifier.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qxmlstream.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qtcoreversion.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qtsqlglobal.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qtsql-config.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqldatabase.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqldriver.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqldriverplugin.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlerror.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlfield.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlindex.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlrecord.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlquery.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlquerymodel.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlrelationaldelegate.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qitemdelegate.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlistview.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlrelationaltablemodel.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqltablemodel.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qsqlresult.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtSql/qtsqlversion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o page3_verificationcode.o ../telegram/page3_verificationcode.cpp
 
 page4_home.o: ../telegram/page4_home.cpp ../telegram/page4_home.h \
@@ -2336,7 +2471,61 @@ page5_client.o: ../telegram/page5_client.cpp ../telegram/page5_client.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtouchdevice.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtabwidget.h \
 		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qicon.h \
-		ui_page5_client.h
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/QAbstractSocket \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/qabstractsocket.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QDebug \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QFile \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QFileDialog \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qfiledialog.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qdir.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qfileinfo.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdialog.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/QHostAddress \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/qhostaddress.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QMessageBox \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmessagebox.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QMetaType \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QString \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QStandardPaths \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qstandardpaths.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/QTcpSocket \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtNetwork/qtcpsocket.h \
+		ui_page5_client.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/QVariant \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QApplication \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qapplication.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtCore/qeventloop.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qguiapplication.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qinputmethod.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QGroupBox \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qgroupbox.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qframe.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QLineEdit \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextcursor.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextformat.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qpen.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextoption.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QMenuBar \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmenubar.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qmenu.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qaction.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qactiongroup.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QPushButton \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QStatusBar \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qstatusbar.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QTextBrowser \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtextbrowser.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qtextedit.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtGui/qtextdocument.h \
+		/home/javad/Qt5.12.12/5.12.12/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o page5_client.o ../telegram/page5_client.cpp
 
 qrc_images.o: qrc_images.cpp 

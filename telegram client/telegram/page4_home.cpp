@@ -5,7 +5,6 @@ page4_home::page4_home(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::page4_home)
 {
-    ui->setupUi(this);
 
     //set minimum and maximum size
     setMinimumSize(800,600);

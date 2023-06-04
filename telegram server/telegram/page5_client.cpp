@@ -1,24 +1,35 @@
 #include "page5_client.h"
 #include "ui_page5_client.h"
 
+#include <QMainWindow>
+#include <QAbstractSocket>
+#include <QDebug>
+#include <QFile>
+#include <QFileDialog>
+#include <QHostAddress>
+#include <QMessageBox>
+#include <QMetaType>
+#include <QString>
+#include <QStandardPaths>
+#include <QTcpSocket>
+
+
 page5_client::page5_client(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::page5_client)
 {
-    ui->setupUi(this);
 
     setMinimumSize(800,600);
     setMaximumSize(800,600);
 
     ui->setupUi(this);
 
-
-
     socket = new QTcpSocket(this);
 
     connect(this, &page5_client::newMessage, this, &page5_client::displayMessage);
     connect(socket, &QTcpSocket::readyRead, this, &page5_client::readSocket);
     connect(socket, &QTcpSocket::disconnected, this, &page5_client::discardSocket);
+
     //connect(socket, &QAbstractSocket::errorOccurred, this, &MainWindow::displayError);
 
     connect(socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(handleError(QAbstractSocket::SocketError)));
@@ -32,7 +43,6 @@ page5_client::page5_client(QWidget *parent) :
         exit(EXIT_FAILURE);
     }
 
-    ui->lineEdit_message->setPlaceholderText("Type here your message...");
 
 
 }
@@ -41,8 +51,6 @@ page5_client::~page5_client()
 {
     if(socket->isOpen())
         socket->close();
-
-
     delete ui;
 }
 
@@ -100,7 +108,7 @@ void page5_client::discardSocket()
     socket->deleteLater();
     socket=nullptr;
 
-   // ui->statusbar->showMessage("Disconnected!");
+    ui->statusbar->showMessage("Disconnected!");
 }
 
 void page5_client::displayError(QAbstractSocket::SocketError socketError)
@@ -127,7 +135,6 @@ void page5_client::on_pushButton_sendMessage_clicked()
         if(socket->isOpen())
         {
             QString str = ui->lineEdit_message->text();
-
 
             QDataStream socketStream(socket);
             socketStream.setVersion(QDataStream::Qt_5_12);

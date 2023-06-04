@@ -5,10 +5,18 @@
 #include "ui_page4_home.h"
 
 #include<QMessageBox>
+#include <QFile>
+#include <QtSql>
 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
+#include <string>
+#include <cstdlib>
+
+
+using namespace std;
 
 // for create a random number
 int rando ;
@@ -69,5 +77,38 @@ void page3_verificationcode::on_pushButton_get_name_clicked()
     page4_home *w = new page4_home;
     w->show();
     this->close();
+
+    string username =  ui->lineEdit_get_name->text().toStdString();
+
+    ofstream file("user.txt");
+
+    file << username << endl;
+
+    file.close();
+
+
+
+/*
+
+QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
+db.setHostName("آدرس سرور");
+db.setDatabaseName(ui->lineEdit_get_name->text());
+db.setUserName("نام کاربری");
+db.setPassword("رمز عبور");
+
+if (db.open()) {
+    // ایجاد جدول messages
+    QSqlQuery query;
+    query.exec("CREATE TABLE messages ("
+               "id INT AUTO_INCREMENT PRIMARY KEY, "
+               "sender_id INT NOT NULL, "
+               "receiver_id INT NOT NULL, "
+               "message_text TEXT NOT NULL, "
+               "timestamp TIMESTAMP NOT NULL"
+               ")");
+}
+else {
+
+}*/
 }
 

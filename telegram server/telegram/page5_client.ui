@@ -48,8 +48,11 @@
        <height>71</height>
       </rect>
      </property>
+     <property name="text">
+      <string/>
+     </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_sendAttachment">
+    <widget class="QPushButton" name="pushButton_sendMessage">
      <property name="geometry">
       <rect>
        <x>370</x>
@@ -62,7 +65,7 @@
       <string>send</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_sendMessage">
+    <widget class="QPushButton" name="pushButton_sendAttachment">
      <property name="geometry">
       <rect>
        <x>370</x>

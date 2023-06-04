@@ -8,8 +8,6 @@ page4_home::page4_home(QWidget *parent) :
     ui->setupUi(this);
 
 
-
-    ui->setupUi(this);
     m_server = new QTcpServer();
 
     if(m_server->listen(QHostAddress::Any, 8080))
