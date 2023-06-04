@@ -23,89 +23,59 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>90</y>
-      <width>611</width>
+      <x>130</x>
+      <y>80</y>
+      <width>541</width>
       <height>401</height>
      </rect>
     </property>
     <property name="title">
      <string/>
     </property>
-    <widget class="QLabel" name="username_label">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>40</y>
-       <width>101</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>user name</string>
-     </property>
-    </widget>
     <widget class="QLineEdit" name="username_lineEdit">
      <property name="geometry">
       <rect>
-       <x>170</x>
+       <x>140</x>
        <y>40</y>
        <width>351</width>
        <height>31</height>
       </rect>
      </property>
-    </widget>
-    <widget class="QLabel" name="Password_label">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>110</y>
-       <width>101</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Password</string>
+     <property name="placeholderText">
+      <string>User Name here...</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="Password_lineEdit">
      <property name="geometry">
       <rect>
-       <x>170</x>
+       <x>140</x>
        <y>110</y>
        <width>351</width>
        <height>31</height>
       </rect>
      </property>
+     <property name="placeholderText">
+      <string>Password here...</string>
+     </property>
     </widget>
     <widget class="QLineEdit" name="Verification_Password_lineEdit">
      <property name="geometry">
       <rect>
-       <x>170</x>
-       <y>170</y>
+       <x>140</x>
+       <y>190</y>
        <width>351</width>
        <height>31</height>
       </rect>
      </property>
-    </widget>
-    <widget class="QLabel" name="verificationpassword_label">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>170</y>
-       <width>141</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
+     <property name="placeholderText">
       <string>Verification Password</string>
      </property>
     </widget>
     <widget class="QPushButton" name="signin_pushButton">
      <property name="geometry">
       <rect>
-       <x>470</x>
-       <y>340</y>
+       <x>430</x>
+       <y>360</y>
        <width>101</width>
        <height>31</height>
       </rect>
@@ -117,8 +87,8 @@
     <widget class="QLabel" name="Question_label">
      <property name="geometry">
       <rect>
-       <x>470</x>
-       <y>310</y>
+       <x>430</x>
+       <y>320</y>
        <width>131</width>
        <height>31</height>
       </rect>
@@ -130,8 +100,8 @@
     <widget class="QLabel" name="capcha_label">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>230</y>
+       <x>20</x>
+       <y>260</y>
        <width>131</width>
        <height>51</height>
       </rect>
@@ -148,8 +118,8 @@
     <widget class="QPushButton" name="capcha_pushButton">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>300</y>
+       <x>50</x>
+       <y>320</y>
        <width>81</width>
        <height>31</height>
       </rect>
@@ -161,8 +131,8 @@
     <widget class="QLineEdit" name="capcha_lineEdit">
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>230</y>
+       <x>170</x>
+       <y>260</y>
        <width>201</width>
        <height>51</height>
       </rect>
@@ -171,8 +141,8 @@
     <widget class="QPushButton" name="next_pushButton">
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>290</y>
+       <x>200</x>
+       <y>320</y>
        <width>155</width>
        <height>54</height>
       </rect>
@@ -190,7 +160,7 @@
     <widget class="QPushButton" name="showhide_pushButton">
      <property name="geometry">
       <rect>
-       <x>480</x>
+       <x>450</x>
        <y>110</y>
        <width>40</width>
        <height>31</height>
@@ -203,8 +173,8 @@
     <widget class="QLabel" name="symbol_label">
      <property name="geometry">
       <rect>
-       <x>180</x>
-       <y>145</y>
+       <x>140</x>
+       <y>150</y>
        <width>121</width>
        <height>21</height>
       </rect>
@@ -219,9 +189,9 @@
     <widget class="QLabel" name="character_label">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>145</y>
-       <width>101</width>
+       <x>230</x>
+       <y>150</y>
+       <width>90</width>
        <height>21</height>
       </rect>
      </property>
@@ -232,8 +202,8 @@
     <widget class="QLabel" name="verification_label">
      <property name="geometry">
       <rect>
-       <x>180</x>
-       <y>210</y>
+       <x>140</x>
+       <y>230</y>
        <width>141</width>
        <height>16</height>
       </rect>
@@ -245,7 +215,7 @@
     <widget class="QLabel" name="check_username_label">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>140</x>
        <y>80</y>
        <width>171</width>
        <height>16</height>
@@ -258,8 +228,8 @@
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>-100</x>
-       <y>-90</y>
+       <x>140</x>
+       <y>-80</y>
        <width>800</width>
        <height>600</height>
       </rect>
@@ -275,12 +245,9 @@
      </property>
     </widget>
     <zorder>label</zorder>
-    <zorder>username_label</zorder>
     <zorder>username_lineEdit</zorder>
-    <zorder>Password_label</zorder>
     <zorder>Password_lineEdit</zorder>
     <zorder>Verification_Password_lineEdit</zorder>
-    <zorder>verificationpassword_label</zorder>
     <zorder>signin_pushButton</zorder>
     <zorder>Question_label</zorder>
     <zorder>capcha_label</zorder>
