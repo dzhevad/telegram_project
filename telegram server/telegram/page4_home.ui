@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>426</width>
+    <height>595</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,14 +20,14 @@
    <widget class="QGroupBox" name="groupBox_chatbox">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>0</y>
+      <x>0</x>
+      <y>10</y>
       <width>421</width>
       <height>541</height>
      </rect>
     </property>
     <property name="title">
-     <string>GroupBox</string>
+     <string>server</string>
     </property>
     <widget class="QTextBrowser" name="textBrowser_receivedMessages">
      <property name="geometry">
@@ -92,8 +92,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>26</height>
+     <width>426</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>

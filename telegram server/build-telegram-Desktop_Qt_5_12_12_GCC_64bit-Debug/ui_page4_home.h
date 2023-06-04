@@ -40,13 +40,13 @@ public:
     {
         if (page4_home->objectName().isEmpty())
             page4_home->setObjectName(QString::fromUtf8("page4_home"));
-        page4_home->resize(800, 600);
+        page4_home->resize(426, 595);
         page4_home->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         centralwidget = new QWidget(page4_home);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         groupBox_chatbox = new QGroupBox(centralwidget);
         groupBox_chatbox->setObjectName(QString::fromUtf8("groupBox_chatbox"));
-        groupBox_chatbox->setGeometry(QRect(370, 0, 421, 541));
+        groupBox_chatbox->setGeometry(QRect(0, 10, 421, 541));
         textBrowser_receivedMessages = new QTextBrowser(groupBox_chatbox);
         textBrowser_receivedMessages->setObjectName(QString::fromUtf8("textBrowser_receivedMessages"));
         textBrowser_receivedMessages->setGeometry(QRect(10, 20, 411, 441));
@@ -65,7 +65,7 @@ public:
         page4_home->setCentralWidget(centralwidget);
         menubar = new QMenuBar(page4_home);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
+        menubar->setGeometry(QRect(0, 0, 426, 22));
         page4_home->setMenuBar(menubar);
         statusbar = new QStatusBar(page4_home);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -79,7 +79,7 @@ public:
     void retranslateUi(QMainWindow *page4_home)
     {
         page4_home->setWindowTitle(QApplication::translate("page4_home", "MainWindow", nullptr));
-        groupBox_chatbox->setTitle(QApplication::translate("page4_home", "GroupBox", nullptr));
+        groupBox_chatbox->setTitle(QApplication::translate("page4_home", "server", nullptr));
         pushButton_sendMessage->setText(QApplication::translate("page4_home", "send", nullptr));
         pushButton_sendAttachment->setText(QApplication::translate("page4_home", "Attach", nullptr));
     } // retranslateUi

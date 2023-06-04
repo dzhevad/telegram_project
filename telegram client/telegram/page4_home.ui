@@ -42,10 +42,10 @@
     <widget class="QLineEdit" name="lineEdit_message">
      <property name="geometry">
       <rect>
-       <x>80</x>
+       <x>10</x>
        <y>460</y>
-       <width>271</width>
-       <height>71</height>
+       <width>341</width>
+       <height>81</height>
       </rect>
      </property>
     </widget>
@@ -53,31 +53,21 @@
      <property name="geometry">
       <rect>
        <x>350</x>
-       <y>470</y>
+       <y>460</y>
        <width>71</width>
-       <height>51</height>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
       <string>send</string>
      </property>
     </widget>
-    <widget class="QComboBox" name="comboBox_receiver">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>501</y>
-       <width>81</width>
-       <height>31</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton_sendAttachment">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>460</y>
-       <width>81</width>
+       <x>350</x>
+       <y>500</y>
+       <width>71</width>
        <height>41</height>
       </rect>
      </property>
@@ -93,7 +83,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

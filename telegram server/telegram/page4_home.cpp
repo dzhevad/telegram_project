@@ -7,9 +7,7 @@ page4_home::page4_home(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    //set minimum and maximum size
-    setMinimumSize(800,600);
-    setMaximumSize(800,600);
+
 
     ui->setupUi(this);
     m_server = new QTcpServer();

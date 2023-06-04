@@ -30,10 +30,9 @@ public:
     QLabel *verification_label;
     QLineEdit *verification_lineEdit;
     QPushButton *next_pushButton;
-    QGroupBox *groupBox_get_name;
-    QPushButton *pushButton_get_name;
     QLineEdit *lineEdit_get_name;
     QLabel *label_get_name;
+    QPushButton *pushButton_get_name;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -49,29 +48,26 @@ public:
         groupBox->setGeometry(QRect(160, 130, 461, 291));
         verification_label = new QLabel(groupBox);
         verification_label->setObjectName(QString::fromUtf8("verification_label"));
-        verification_label->setGeometry(QRect(10, 60, 171, 41));
+        verification_label->setGeometry(QRect(10, 60, 211, 41));
         verification_lineEdit = new QLineEdit(groupBox);
         verification_lineEdit->setObjectName(QString::fromUtf8("verification_lineEdit"));
         verification_lineEdit->setGeometry(QRect(230, 70, 211, 31));
         next_pushButton = new QPushButton(groupBox);
         next_pushButton->setObjectName(QString::fromUtf8("next_pushButton"));
         next_pushButton->setGeometry(QRect(150, 160, 171, 41));
-        groupBox_get_name = new QGroupBox(groupBox);
-        groupBox_get_name->setObjectName(QString::fromUtf8("groupBox_get_name"));
-        groupBox_get_name->setGeometry(QRect(-20, 50, 491, 221));
-        pushButton_get_name = new QPushButton(groupBox_get_name);
-        pushButton_get_name->setObjectName(QString::fromUtf8("pushButton_get_name"));
-        pushButton_get_name->setGeometry(QRect(190, 140, 151, 41));
-        lineEdit_get_name = new QLineEdit(groupBox_get_name);
+        lineEdit_get_name = new QLineEdit(groupBox);
         lineEdit_get_name->setObjectName(QString::fromUtf8("lineEdit_get_name"));
-        lineEdit_get_name->setGeometry(QRect(180, 50, 251, 31));
-        label_get_name = new QLabel(groupBox_get_name);
+        lineEdit_get_name->setGeometry(QRect(190, 110, 251, 31));
+        label_get_name = new QLabel(groupBox);
         label_get_name->setObjectName(QString::fromUtf8("label_get_name"));
-        label_get_name->setGeometry(QRect(50, 50, 171, 21));
+        label_get_name->setGeometry(QRect(10, 100, 171, 21));
+        pushButton_get_name = new QPushButton(groupBox);
+        pushButton_get_name->setObjectName(QString::fromUtf8("pushButton_get_name"));
+        pushButton_get_name->setGeometry(QRect(160, 200, 151, 41));
         page3_verificationcode->setCentralWidget(centralwidget);
         menubar = new QMenuBar(page3_verificationcode);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
+        menubar->setGeometry(QRect(0, 0, 800, 22));
         page3_verificationcode->setMenuBar(menubar);
         statusbar = new QStatusBar(page3_verificationcode);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -88,9 +84,8 @@ public:
         groupBox->setTitle(QString());
         verification_label->setText(QApplication::translate("page3_verificationcode", "Enter the verification code:", nullptr));
         next_pushButton->setText(QApplication::translate("page3_verificationcode", "next", nullptr));
-        groupBox_get_name->setTitle(QString());
-        pushButton_get_name->setText(QApplication::translate("page3_verificationcode", "next", nullptr));
         label_get_name->setText(QApplication::translate("page3_verificationcode", "Enter your name :", nullptr));
+        pushButton_get_name->setText(QApplication::translate("page3_verificationcode", "next", nullptr));
     } // retranslateUi
 
 };

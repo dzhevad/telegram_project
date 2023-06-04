@@ -15,6 +15,7 @@ SOURCES += \
     page2_login.cpp \
     page3_verificationcode.cpp \
     page4_home.cpp \
+    page5_client.cpp
 
 
 HEADERS += \
@@ -22,6 +23,7 @@ HEADERS += \
     page2_login.h \
     page3_verificationcode.h \
     page4_home.h \
+    page5_client.h
 
 
 FORMS += \
@@ -29,6 +31,7 @@ FORMS += \
     page2_login.ui \
     page3_verificationcode.ui \
     page4_home.ui \
+    page5_client.ui
 
 
 # Default rules for deployment.

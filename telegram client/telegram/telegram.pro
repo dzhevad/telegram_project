@@ -14,21 +14,21 @@ SOURCES += \
     page1_start.cpp \
     page2_login.cpp \
     page3_verificationcode.cpp \
-    page4_home.cpp \
+    page4_home.cpp
 
 
 HEADERS += \
     page1_start.h \
     page2_login.h \
     page3_verificationcode.h \
-    page4_home.h \
+    page4_home.h
 
 
 FORMS += \
     page1_start.ui \
     page2_login.ui \
     page3_verificationcode.ui \
-    page4_home.ui \
+    page4_home.ui
 
 
 # Default rules for deployment.

@@ -49,15 +49,13 @@ void page3_verificationcode::on_next_pushButton_clicked()
     //check the verification code
     if(ui->verification_lineEdit->text() == QString::number(rando)){
 
+        ui->verification_label->hide();
+        ui->verification_lineEdit->hide();
+        ui->next_pushButton->hide();
+
         ui->label_get_name->show();
         ui->lineEdit_get_name->show();
         ui->pushButton_get_name->show();
-
-
-        ui->next_pushButton->hide();
-        ui->verification_label->hide();
-        ui->verification_lineEdit->hide();
-
 
     }
     else{
