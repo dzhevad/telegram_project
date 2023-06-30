@@ -85,30 +85,5 @@ void page3_verificationcode::on_pushButton_get_name_clicked()
     file << username << endl;
 
     file.close();
-
-
-
-/*
-
-QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
-db.setHostName("آدرس سرور");
-db.setDatabaseName(ui->lineEdit_get_name->text());
-db.setUserName("نام کاربری");
-db.setPassword("رمز عبور");
-
-if (db.open()) {
-    // ایجاد جدول messages
-    QSqlQuery query;
-    query.exec("CREATE TABLE messages ("
-               "id INT AUTO_INCREMENT PRIMARY KEY, "
-               "sender_id INT NOT NULL, "
-               "receiver_id INT NOT NULL, "
-               "message_text TEXT NOT NULL, "
-               "timestamp TIMESTAMP NOT NULL"
-               ")");
-}
-else {
-
-}*/
 }
 

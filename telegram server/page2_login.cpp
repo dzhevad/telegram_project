@@ -228,14 +228,14 @@ void page2_login::on_next_pushButton_clicked()
 
                 file.close();
 
-                ofstream file1("user.txt");
+                /*ofstream file1("user.txt");
 
                 file1 << username << endl;
 
-                file1.close();
+                file1.close();*/
             }
             // if user want to login save username in user.txt file
-            else{
+            /*else{
                 username = ui->username_lineEdit->text().toStdString();
 
                 ofstream file("user.txt");
@@ -243,7 +243,7 @@ void page2_login::on_next_pushButton_clicked()
                 file << username << endl;
 
                 file.close();
-            }
+            }*/
         }
 
         this->close();
