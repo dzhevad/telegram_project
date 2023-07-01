@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>1.test.png</file>
+        <file>back.jpg</file>
+        <file>hide-button-icon.png</file>
+        <file>next-button.png</file>
+        <file>show-button-icon.png</file>
+        <file>welcome _page4.png</file>
+        <file>no_back.png</file>
+        <file>page1_back.jpg</file>
+        <file>no back for pag 1.png</file>
+        <file>Background_page1_plane.jpg</file>
+        <file>Background_page1_planedark.jpg</file>
+        <file>back_moon.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix1"/>
+</RCC>
