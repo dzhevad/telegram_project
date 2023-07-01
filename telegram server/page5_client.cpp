@@ -1,10 +1,13 @@
 #include "page5_client.h"
 #include "ui_page5_client.h"
 
+#include "1_username.h"
+
 #include <QMainWindow>
 #include <QAbstractSocket>
 #include <QDebug>
 #include <QFile>
+#include "QString"
 #include <QFileDialog>
 #include <QHostAddress>
 #include <QMessageBox>
@@ -12,12 +15,20 @@
 #include <QString>
 #include <QStandardPaths>
 #include <QTcpSocket>
+#include "string"
 
+using namespace std;
 
 page5_client::page5_client(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::page5_client)
 {
+
+    user user1;
+
+    string username = user1.get_name();
+
+    QString name = QString::fromStdString(username);
 
     setMinimumSize(800,600);
     setMaximumSize(800,600);
@@ -43,7 +54,7 @@ page5_client::page5_client(QWidget *parent) :
         exit(EXIT_FAILURE);
     }
 
-
+//    ui->statusbar->showMessage(name);
 
 }
 

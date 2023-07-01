@@ -3,6 +3,8 @@
 
 #include "page4_home.h"
 #include "ui_page4_home.h"
+#include "page5_client.h"
+#include "ui_page5_client.h"
 
 #include<QMessageBox>
 #include <QFile>
@@ -74,10 +76,6 @@ void page3_verificationcode::on_next_pushButton_clicked()
 
 void page3_verificationcode::on_pushButton_get_name_clicked()
 {
-    page4_home *w = new page4_home;
-    w->show();
-    this->close();
-
     string username =  ui->lineEdit_get_name->text().toStdString();
 
     ofstream file("user.txt");
@@ -85,5 +83,14 @@ void page3_verificationcode::on_pushButton_get_name_clicked()
     file << username << endl;
 
     file.close();
-}
+
+    page4_home *w = new page4_home;
+    w->show();
+
+
+    page5_client *p = new page5_client;
+    p->show();
+
+    this->close();
+    }
 

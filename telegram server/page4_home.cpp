@@ -14,6 +14,7 @@ page4_home::page4_home(QWidget *parent) :
     {
        connect(this, &page4_home::newMessage, this, &page4_home::displayMessage);
        connect(m_server, &QTcpServer::newConnection, this, &page4_home::newConnection);
+
        //ui->statusBar->showMessage("Server is listening...");
     }
     else

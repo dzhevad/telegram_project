@@ -19,6 +19,7 @@ SOURCES += \
 
 
 HEADERS += \
+    1_username.h \
     page1_start.h \
     page2_login.h \
     page3_verificationcode.h \
