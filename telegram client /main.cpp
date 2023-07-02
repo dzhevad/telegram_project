@@ -1,7 +1,8 @@
 #include "page1_start.h"
 
 #include "page4_home.h"
-#include "ui_page4_home.h"
+
+
 #include <QListWidget>
 
 #include <QApplication>
@@ -36,6 +37,7 @@ int main(int argc, char *argv[])
 
         page4_home *p = new page4_home;
         p->show();
+
     }
 
 

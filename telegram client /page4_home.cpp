@@ -10,7 +10,6 @@ page4_home::page4_home(QWidget *parent) :
 
     user user1;
 
-
     QString name = QString::fromStdString(user1.get_name());
 
     //set minimum and maximum size
@@ -28,14 +27,52 @@ page4_home::page4_home(QWidget *parent) :
 
     connect(socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(handleError(QAbstractSocket::SocketError)));
 
-    socket->connectToHost(QHostAddress::LocalHost,8080);
+//    socket->connectToHost(QHostAddress::LocalHost,8080);
 
-    if(socket->waitForConnected())
+//    if(socket->waitForConnected())
+//        ui->statusbar->showMessage("Connected to Server");
+//    else{
+//        QMessageBox::critical(this,"QTCPClient", QString("The following error occurred: %1.").arg(socket->errorString()));
+//        exit(EXIT_FAILURE);
+//    }
+
+
+    // Connect to the server
+    socket->connectToHost(QHostAddress::LocalHost, 8080);
+
+    if (socket->waitForConnected()) {
         ui->statusbar->showMessage("Connected to Server");
-    else{
-        QMessageBox::critical(this,"QTCPClient", QString("The following error occurred: %1.").arg(socket->errorString()));
+
+        // Get the client's port
+        quint16 clientPort = socket->localPort();
+
+        // Get the client's name
+        QString clientName = name; // Assuming "name" is the client's name
+
+        // Prepare the message to send
+        QString message = QString("!!port:%1,name:%2;").arg(clientPort).arg(clientName);
+
+        // Send the message to the server
+        /*socket->write(message.toUtf8());
+        socket->flush();*/
+
+        QDataStream socketStream(socket);
+        socketStream.setVersion(QDataStream::Qt_5_12);
+        QByteArray header;
+        header.prepend(QString("fileType:message,fileName:null,fileSize:%1;").arg(message.size()).toUtf8());
+        header.resize(128);
+
+        QByteArray byteArray = message.toUtf8();
+        byteArray.prepend(header);
+
+        socketStream << byteArray;
+
+
+    } else {
+        QMessageBox::critical(this, "QTCPClient", QString("The following error occurred: %1.").arg(socket->errorString()));
         exit(EXIT_FAILURE);
     }
+
 
     ui->lineEdit_message->setPlaceholderText("Type here your message...");
 
