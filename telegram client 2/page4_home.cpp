@@ -7,14 +7,12 @@ page4_home::page4_home(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::page4_home)
 {
-    ui->setupUi(this);
 
     user user1;
 
-    string username = user1.get_name();
+    QString name = QString::fromStdString(user1.get_name());
 
-    QString name = QString::fromStdString(username);
-
+    //set minimum and maximum size
     setMinimumSize(800,600);
     setMaximumSize(800,600);
 
@@ -25,7 +23,6 @@ page4_home::page4_home(QWidget *parent) :
     connect(this, &page4_home::newMessage, this, &page4_home::displayMessage);
     connect(socket, &QTcpSocket::readyRead, this, &page4_home::readSocket);
     connect(socket, &QTcpSocket::disconnected, this, &page4_home::discardSocket);
-
     //connect(socket, &QAbstractSocket::errorOccurred, this, &MainWindow::displayError);
 
     connect(socket, SIGNAL(error(QAbstractSocket::SocketError)), this, SLOT(handleError(QAbstractSocket::SocketError)));
@@ -39,6 +36,9 @@ page4_home::page4_home(QWidget *parent) :
         exit(EXIT_FAILURE);
     }
 
+    ui->lineEdit_message->setPlaceholderText("Type here your message...");
+
+
 
 }
 
@@ -46,10 +46,9 @@ page4_home::~page4_home()
 {
     if(socket->isOpen())
         socket->close();
+
     delete ui;
 }
-
-
 
 void page4_home::readSocket()
 {
@@ -198,5 +197,3 @@ void page4_home::displayMessage(const QString& str)
 {
     ui->textBrowser_receivedMessages->append(str);
 }
-
-

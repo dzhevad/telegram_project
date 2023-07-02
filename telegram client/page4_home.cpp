@@ -1,10 +1,17 @@
 #include "page4_home.h"
 #include "ui_page4_home.h"
 
+#include "1_username.h"
+
 page4_home::page4_home(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::page4_home)
 {
+
+    user user1;
+
+
+    QString name = QString::fromStdString(user1.get_name());
 
     //set minimum and maximum size
     setMinimumSize(800,600);

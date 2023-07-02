@@ -165,6 +165,7 @@ void page_server::on_pushButton_sendMessage_clicked()
             }
         }
     }
+
     ui->lineEdit_message->clear();
 }
 
